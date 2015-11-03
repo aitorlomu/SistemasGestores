@@ -1,0 +1,2 @@
+El método recursivo tiene una limitación de profundidad, mientras que el iterativo no tiene este problema al ser lineal.
+Por lo que si n es bajo será más eficiente el recursivo, pero si n es grande, el único que da solución es el iterativo.
