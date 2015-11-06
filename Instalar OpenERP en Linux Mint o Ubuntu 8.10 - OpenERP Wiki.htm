@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="es"><head><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/controltag" async="" type="text/javascript"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/c59hk50tip94.js" async="" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="generator" content="MediaWiki 1.19.20">
+<meta name="keywords" content="OpenERP Wiki,esopenerp,Instalar OpenERP en Linux Mint o Ubuntu 8.10">
+<meta name="description" content="Este tutorial fue probado con Linux Mint 6, por lo cual para los usuarios de Ubuntu intrepid les...">
+<link rel="canonical" href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10">
+<link rel="image_src" href="http://img1.wikia.nocookie.net/__cb20090609153935/openerp/es/images/thumb/2/20/Openerp-sesion.png/100px-53%2C496%2C0%2C442-Openerp-sesion.png">
+<link rel="alternate" type="application/x-wiki" title="Editar" href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?action=edit">
+<link rel="edit" title="Editar" href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?action=edit">
+<link rel="apple-touch-icon" href="http://img1.wikia.nocookie.net/__cb1/openerp/es/images/b/bc/Wiki.png">
+<link rel="shortcut icon" href="http://img1.wikia.nocookie.net/__cb20090419164424/openerp/es/images/6/64/Favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://es.openerp.wikia.com/opensearch_desc.php" title="OpenERP Wiki (es)">
+<link rel="EditURI" type="application/rsd+xml" href="http://es.openerp.wikia.com/api.php?action=rsd">
+<link rel="copyright" href="http://community.wikia.com/wiki/c:comunidad:Licencia">
+<link rel="alternate" type="application/atom+xml" title="Feed Atom de OpenERP Wiki" href="http://es.openerp.wikia.com/wiki/Especial:CambiosRecientes?feed=atom">
+<title>Instalar OpenERP en Linux Mint o Ubuntu 8.10 - OpenERP Wiki</title>
+
+<!-- CSS injected by skin and extensions -->
+<link rel="stylesheet" href="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/Qualaroo.css"><link rel="stylesheet" href="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/ext.css"><style>			/* Add a pretty logo to Facebook links */
+			.mw-fblink {
+				background: url(http://static.ak.fbcdn.net/images/icons/favicon.gif) top left no-repeat !important;
+				padding-left: 17px !important;
+			}</style><style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: esopenerp:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+
+
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/gpt.js" type="text/javascript" async=""></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/bgJ.js" async="" type="text/javascript"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/bid" async="" type="text/javascript"></script><script type="text/javascript" async="" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/quant.js"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/beacon.js" async=""></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/ga.js" async="" type="text/javascript"></script><script>
+var Wikia={},
+wgJqueryUrl=["http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"],
+launchSpotlightABTest=false,
+wgWikiVertical="other",
+wgWikiCategories=["auto"],
+wgMessages={"categoryselect-button-save":"Guardar","categoryselect-category-add":"Añadir una categoría...","categoryselect-category-edit":"Editar categoría","categoryselect-category-remove":"Eliminar categoría","categoryselect-error-category-name-length":"Se ha alcanzado el límite máximo para el nombre de la categoría.","categoryselect-error-duplicate-category-name":"La categoría \"$1\" ya existe.","categoryselect-error-empty-category-name":"Escribe un nombre de categoría.","categoryselect-modal-category-name":"Escribe el nombre de la categoría:","categoryselect-modal-category-sortkey":"Opcionalmente, puedes afabetizar este artículo en la categoría \"$1\" con el nombre:","categoryselect-tooltip-add":"Presiona Enter o Retroceso cuando termines.","wikiarelatedpages-heading":"Leer más"},
+JSSnippetsStack=[],
+wgEnableAdsInContent=1,
+wgEnableOpenXSPC=true,
+adEnginePageType="all_ads",
+wgAdDriverUseCatParam="en",
+wgAdDriverUseDartForSlotsBelowTheFold=true,
+wgEnableOutboundScreenExt=true,
+wgAdVideoTargeting=true,
+wgShowAds=true,
+wgAdsShowableOnPage=true,
+wikiaPageType="article",
+cscoreCat="Lifestyle",
+wgEnableKruxTargeting=true,
+cityShort="auto",
+wgKruxCategoryId="Hixvb8MR",
+adslots2=[],
+adDriverLastDARTCallNoAds=[],
+adDriver2ForcedStatus=[],
+wgAfterContentAndJS=[],
+wgWikiFactoryTagIds=[136,100048,100109],
+wgWikiFactoryTagNames=["auto","foreign_vibrant","es"],
+wgCdnRootUrl="http://slot1.images.wikia.nocookie.net",
+wgCdnApiUrl="http://api.wikia.nocookie.net/__cb1414084466",
+wgDBname="esopenerp",
+wgCityId="17134",
+wgContentLanguage="es",
+wgUserName=null,
+wgArticleId=57,
+wgCategories=["General"],
+wgPageName="Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10",
+skin="oasis",
+_gaq=[],
+wgIsGASpecialWiki=null,
+wgStyleVersion="1414084466",
+wgTransactionContext={"type":"page/main/view/oasis/no_parser/average","env":"prod","wiki":"esopenerp","entry_point":"page","namespace":0,"logged_in":false,"action":"view","skin":"oasis","parser_cache_used":true,"size_category":"average"},
+wgBuckyConfig={"host":"//speed.wikia.net/__rum","sample":0.1,"aggregationInterval":1000,"protocol":2},
+wgGlobalSearchUrl="http://www.wikia.com/Special:Search";
+</script><script>window.mw||(mw={fk:1,loader:{state:function(s){preMwLdrStA=window.preMwLdrStA||[];preMwLdrStA.push(s)}}});</script>
+<script>
+function syslogReport(priority,message,context){context=context||null;var url='//jserrorslog.wikia.com/',i=new Image(),data={'@message':message,'syslog_pri':priority};if(context){data['@context']=context;}
+try{data['@fields']={server:document.cookie.match(/server.([A-Z]*).cache/)[1]};}catch(e){}
+try{i.src=url+'l?'+JSON.stringify(data);}catch(e){i.src=url+'e?'+e;}}</script><script>var wgNow = new Date();</script>
+<!-- Wikia Beacon Tracking -->
+<noscript><img src="http://a.wikia-beacon.com/__track/view?cb=1414084466&amp;c=17134&amp;lc=es&amp;lid=78&amp;x=esopenerp&amp;y=c1&amp;u=0&amp;a=57&amp;s=oasis&amp;n=0&amp;nojs=1" width="1" height="1" border="0" alt="" /></noscript>
+<script>
+(function() {
+	var result = RegExp("wikia_beacon_id=([A-Za-z0-9_-]{10})").exec(document.cookie);
+	if(result) {
+		window.beacon_id = result[1];
+	} else {
+		// something went terribly wrong
+	}
+
+	var utma = RegExp("__utma=([0-9\.]+)").exec(document.cookie);
+	var utmb = RegExp("__utmb=([0-9\.]+)").exec(document.cookie);
+
+	var trackUrl = "http://a.wikia-beacon.com/__track/view?cb=1414084466&amp;c=17134&amp;lc=es&amp;lid=78&amp;x=esopenerp&amp;y=c1&amp;u=0&amp;a=57&amp;s=oasis&amp;n=0" + ((typeof document.referrer != "undefined") ? "&amp;r=" + escape(document.referrer) : "") + "&amp;rand=" + (new Date).valueOf() + (window.beacon_id ? "&amp;beacon=" + window.beacon_id : "") + (utma && utma[1] ? "&amp;utma=" + utma[1] : "") + (utmb && utmb[1] ? "&amp;utmb=" + utmb[1] : "");
+	document.write('<'+'script type="text/javascript" src="' + trackUrl + '"><'+'/script>');
+})();
+</script><script type="text/javascript" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/view"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikia_002.php"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikia.instantGlobals,abtesting"></script>
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/amdwikia.abTest,cache,cookies,document,ge"></script>
+<script>/*<![CDATA[*/window.mw.fk&&delete mw;/*]]>*/</script>
+<script type="text/javascript" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/abtestingoasis_blockinganalytics_gas_jsadengine2_tracking_jsa.js"></script>
+<!-- Make IE recognize HTML5 tags. -->
+<!--[if IE]>
+	<script>/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark menu meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
+<![endif]-->
+
+
+
+	<meta property="fb:app_id" content="112328095453510" prefix="fb: http://www.facebook.com/2008/fbml">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="OpenERP Wiki">
+	<meta property="og:title" content="Instalar OpenERP en Linux Mint o Ubuntu 8.10">
+	<meta property="og:description" content="Este tutorial fue probado con Linux Mint 6, por lo cual para los usuarios de Ubuntu intrepid les servirá también. OpenERP es uno de los mejores ERP open source que existen. Es modular, por lo cual se adecua a las necesidades de cada empresa ya sea pequeña, mediana o grande. Maneja información muy órdenada, lo cual facilita su rápido aprendizaje y adaptación. Fácil configuración, en poco menos de media hora se puede tener funcionando. Para más detalles ver la página oficial.">
+	<meta property="og:url" content="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10">
+	<meta property="og:image" content="http://img3.wikia.nocookie.net/__cb20090609154017/openerp/es/images/thumb/2/25/Openerp-escritorio.png/500px-Openerp-escritorio.png">
+<meta name="apple-itunes-app" content="app-id=623705389">
+<style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: slot1:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+
+.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: slot1:resourceloader:filter:minify-css:7:8b08bdc91c52a9ffba396dccfb5b473c */</style><meta name="ResourceLoaderDynamicStyles"><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/pubads_impl_52.js" type="text/javascript" async=""></script><style id="ki-lcz-lz" type="text/css"></style><style id="ki-lcz-le" type="text/css"></style></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8_10  TOC_hide wikinav2 skin-oasis background-not-tiled background-dynamic"><div style="display: none;" class="js-messagebox" id="mw-js-message"></div>
+	<div class="background-image-gradient"></div>
+
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6177433",
+	options: {
+		url_append: "comscorekw=wikiacsid_lifestyle"
+	}
+});
+
+(function() {
+	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+	s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+	el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6177433&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c7=http%3A%2F%2Fes.openerp.wikia.com%2Fwiki%2FInstalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10%3Fcomscorekw%3Dwikiacsid_lifestyle&amp;c15=&amp;cv=2.0&amp;cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- Start for QuantServe, page_view -->
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+   var elem = document.createElement('script');
+
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+</script>
+<script type="text/javascript">
+var quantcastLabels = "";
+if (window.wgWikiVertical) {
+	quantcastLabels += wgWikiVertical;
+	if (window.wgDartCustomKeyValues) {
+		var keyValues = wgDartCustomKeyValues.split(';');
+		for (var i=0; i<keyValues.length; i++) {
+			var keyValue = keyValues[i].split('=');
+			if (keyValue.length >= 2) {
+				quantcastLabels += ',' + wgWikiVertical + '.' + keyValue[1];
+			}
+		}
+	}
+}
+_qevents.push( { qacct:"p-8bG6eLqkH6Avk", labels:quantcastLabels } );
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-8bG6eLqkH6Avk.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+
+<!-- Start for AmazonDirectTargetedBuy, page_view -->
+		<script>
+			require(['wikia.geo', 'wikia.instantGlobals'], function (geo, globals) {
+				if (globals.wgAmazonDirectTargetedBuyCountries && globals.wgAmazonDirectTargetedBuyCountries.indexOf(geo.getCountryCode()) > -1) {
+					var aax_src='3006',
+						aax_url = encodeURIComponent(document.location),
+						s = document.createElement('script'),
+						insertLoc = document.getElementsByTagName('script')[0];
+
+					try { aax_url = encodeURIComponent("" + window.top.location); } catch(e) {}
+
+					s.type = 'text/javascript';
+					s.async = true;
+					s.src = '//aax.amazon-adsystem.com/e/dtb/bid?src=' + aax_src + '&u=' + aax_url + "&cb=" + Math.round(Math.random()*10000000);
+
+					insertLoc.parentNode.insertBefore(s, insertLoc);
+				}
+			});
+		</script><!-- Unsupported language for AnalyticsProviderIVW2 -->
+<!-- Start for RubiconRTP, page_view -->
+<script>
+	rp_config = {"disabled":false,"oz_site":"7450\/11979","oz_zone":"145168","oz_ad_slot_size":"728x90","skin":"oasis"};
+	// Configuration through globals:
+	oz_async = true;
+	oz_cached_only = false;
+	oz_api = rp_config.oz_api || "valuation";
+	oz_ad_server = rp_config.oz_ad_server || "dart";
+	oz_site = rp_config.oz_site;
+	oz_zone = rp_config.oz_zone;
+	oz_ad_slot_size = rp_config.oz_ad_slot_size;
+
+	require(['wikia.geo', 'wikia.instantGlobals', 'ext.wikia.adEngine.rubiconRtp'], function (geo, instantGlobals, rtp) {
+		var rtpCountries = ["US","UK","GB","DE","CA","AU","NZ"], country = geo.getCountryCode();
+
+		if (rtpCountries.indexOf(country) !== -1 && !instantGlobals.wgSitewideDisableRubiconRTP) {
+			rtp.call();
+		}
+	});
+</script><div class="WikiaSiteWrapper">
+	<h1>Wikia</h1>
+<div class="skiplinkcontainer">
+<a class="skiplink" rel="nofollow" href="#WikiaArticle">Saltar al contenido</a>
+<a class="skiplink wikinav" rel="nofollow" href="#WikiHeader">Saltar al Navegación Wiki</a>
+<a class="skiplink sitenav" rel="nofollow" href="#GlobalNavigation">Saltar a la navegación del sitio</a>
+</div>
+
+<div id="ad-skin" class="wikia-ad noprint"></div>
+
+	<header id="WikiaHeader" class="WikiaHeader">
+	<div class="wikia-header-mask">
+		<div class="page-width-container">
+						<nav>
+								<h1>Wikia Navigation</h1>
+								<ul>
+					<li class="WikiaLogo">
+						<a href="http://es.wikia.com/wiki/Wikia" rel="nofollow"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite logo" alt="Wikia" height="23" width="91"></a>
+					</li>
+					<li class="start-a-wiki">
+						<a href="http://www.wikia.com/Special:CreateNewWiki?uselang=es" class="wikia-button">Crear un wiki</a>
+					</li>
+					<li>
+						<ul id="GlobalNavigation" class="GlobalNavigation" data-hash="95195280b7db176d36d30045beef3909">
+																																			<li class="topNav Videojuegos video-games-vertical-color" data-index="1">
+											<a href="http://community.wikia.com/wiki/c:es:Videojuegos">Videojuegos<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron" height="0" width="0"></a>
+											<ul class="subnav">		<li>
+		<a href="http://community.wikia.com/wiki/c:es.gaming">Más visitados</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.pokemon">Pokémon</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.gta">Grand Theft Auto</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.yugioh">Yu-Gi-Oh!</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.dragoncity">Dragon City</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.terraria">Terraria</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.gaming">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.halo">Halo</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.zelda">Zelda</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.elderscrolls">Elder Scrolls</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.sims">Los Sims</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.monsterlegends">Monster Legends</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.gaming">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.ssb">Super Smash Bros</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.clubpenguin">Club Penguin</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.sonic">Sonic</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.residentevil">Resident Evil</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.warhammer40k">Warhammer 40k</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.gaming">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.assassinscreed">Assassin's Creed</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.dofuswiki">Dofus</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.mario">Super Mario</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.callofduty">Call of Duty</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.megaman">Mega Man</a></li>
+							</ul>
+			</li>
+</ul>
+										</li>
+																												<li class="topNav Entretenimiento entertainment-vertical-color" data-index="26">
+											<a href="http://community.wikia.com/wiki/c:es:Entretenimiento">Entretenimiento<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron" height="0" width="0"></a>
+											<ul class="subnav">		<li>
+		<a href="http://community.wikia.com/wiki/c:es.entertainment">Más visitados</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.drama">Drama</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.doblaje">Doblaje</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.naruto">Naruto</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.dragonball">Dragon Ball</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.horadeaventura">Hora de Aventura</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.entertainment">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.mlp">My Little Pony</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:hieloyfuego">Hielo y Fuego</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.onepiece">One Piece</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.regularshow">Regular Show</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.ben10">Ben 10</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.entertainment">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.creepypasta">Creepypasta</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.saintseiya">Saint Seiya</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.thewalkingdead">The Walking Dead</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.starwars">Star Wars</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.disney">Disney</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:es.entertainment">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.bleach">Bleach</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:los-juegos-del-hambre">Los Juegos del Hambre</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.bajoterra">Bajoterra</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.harrypotter">Harry Potter</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.fairytail">Fairy Tail</a></li>
+							</ul>
+			</li>
+</ul>
+										</li>
+																												<li class="topNav Estilo_de_vida community-vertical-color" data-index="51">
+											<a href="http://community.wikia.com/wiki/c:comunidad:Lista_de_Wikis">Estilo de vida<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron" height="0" width="0"></a>
+											<ul class="subnav">		<li>
+		<a href="http://community.wikia.com/wiki/c:respuestas">WikiRespuestas</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:pokemon.respuestas">Pokémon Respuestas</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:gta.respuestas">GTA Respuestas</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:simpsons.respuestas">Simpsons Respuestas</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:naruto.respuestas">Naruto Respuestas</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:dragonball.respuestas">Dragonball Respuestas</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:comunidad:Lista_de_Wikis">Otros</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:Inciclopedia">Inciclopedia</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.althistory">Historia Alternativa</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.yugiohdecks">Yu-Gi-Oh! Decks</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.prehistrico">Prehistoria</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.club-penguin-super-fanon">Club Penguin Fanon</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:comunidadLista_de_Wikis">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.la-wiki-pokeland">Pokeland</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.mujeres">Mujeres</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:ceramica">Cerámica</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:futbol">Fútbol</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:quimica">Química</a></li>
+							</ul>
+			</li>
+		<li>
+		<a href="http://community.wikia.com/wiki/c:comunidadLista_de_Wikis">&nbsp;</a>
+					<ul class="catnav">
+														<li><a href="http://community.wikia.com/wiki/c:es.bionicle">Bionicle</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.althistory">Historia Alternativa</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:micronaciones">Micronaciones</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:es.mitologia">Mitología</a></li>
+														<li><a href="http://community.wikia.com/wiki/c:arte">Arte</a></li>
+							</ul>
+			</li>
+</ul>
+										</li>
+																					</ul>
+					</li>
+									</ul>
+			</nav>
+			<ul id="AccountNavigation" class="AccountNavigation">
+
+	
+	
+	<li>
+		<a data-id="login" href="http://es.openerp.wikia.com/wiki/Especial:Entrar?returnto=Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" rel="nofollow" class="ajaxLogin" accesskey="o">Iniciar sesión<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron" height="0" width="0"></a>		<div id="UserLoginDropdown" class="UserLoginDropdown subnav">
+
+<form action="/wiki/Especial:Entrar" method="post" class="WikiaForm">
+	<fieldset>
+		
+					<div class="input-group error general-errors">
+				<div class="error-msg"></div>
+			</div>
+		
+		
+									
+									<input name="loginToken" value="" type="hidden">
+											
+									<input name="returnto" value="Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" type="hidden">
+											
+									<input name="returntoquery" value="title=Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" type="hidden">
+											
+															<div class="input-group required">
+					
+													<label>Nombre de usuario:</label>
+						
+						
+																												<input name="username" tabindex="1" type="text">
+							
+						
+						
+											</div>
+					
+											
+															<div class="input-group password-input required">
+					
+													<label>Contraseña:</label>
+						
+						
+														<input class="password-input" name="password" tabindex="2" type="password">
+							
+						
+						
+											</div>
+					
+											
+															<div class="input-group">
+					
+						
+						
+														<a href="#" class="forgot-password" tabindex="0">¿Olvidaste tu contraseña?</a>							
+						
+						
+											</div>
+					
+											
+															<div class="input-group keep-logged-in">
+					
+						
+													<label>
+						
+														<input class="keep-logged-in" name="keeploggedin" value="1" tabindex="3" type="checkbox">
+								
+						
+													Permanece conectado</label>
+						
+											</div>
+					
+											
+															<div class="input-group login-button">
+					
+						
+						
+														<input class="login-button" value="Iniciar sesión" tabindex="4" type="submit">
+							
+						
+						
+											</div>
+					
+										</fieldset>
+
+	</form>
+	<div class="sso-login">
+		<div class="sso-login-divider">
+			<span>o</span>
+		</div>
+
+					<a href="#" class="wikia-button wikia-button-facebook sso-login-facebook" data-id="facebook" tabindex="5"><img alt="" class="sprite facebook" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" height="14" width="15"> Conectar</a>
+	</div></div>
+	</li>
+	<li>
+		<a data-id="register" href="http://es.openerp.wikia.com/wiki/Especial:UserSignup" rel="nofollow" class="ajaxRegister">Crear una cuenta</a>	</li>
+
+	
+</ul>
+					</div>
+	</div>
+</header>
+<div class="WikiaTopAds" id="WikiaTopAds">
+
+	<div class="WikiaTopAdsInner">
+
+
+		<!-- BEGIN SLOTNAME: TOP_LEADERBOARD -->
+<div id="TOP_LEADERBOARD" class="wikia-ad noprint default-height">
+<script>
+	window.adslots2.push(["TOP_LEADERBOARD",null,"AdEngine2"]);
+</script>
+<div data-gpt-slot-sizes="[[728,90],[1030,130],[1030,65],[1030,250],[970,250],[970,90],[970,66],[970,180],[980,150]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;top&quot;,&quot;pos&quot;:&quot;TOP_LEADERBOARD&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="TOP_LEADERBOARD_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_LEADERBOARD_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_LEADERBOARD_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_LEADERBOARD_gpt_0" height="90" width="728" frameborder="0"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_LEADERBOARD_gpt_0__hidden__" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_LEADERBOARD_gpt_0__hidden__" height="0" width="0" frameborder="0"></iframe></div></div>
+<!-- END SLOTNAME: TOP_LEADERBOARD -->
+
+		<!-- BEGIN SLOTNAME: TOP_BUTTON_WIDE -->
+<div id="TOP_BUTTON_WIDE" class="  wikia-ad noprint default-height   hidden">
+<script>
+	window.adslots2.push(["TOP_BUTTON_WIDE",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: TOP_BUTTON_WIDE -->
+
+	</div>
+
+	<!-- BEGIN SLOTNAME: INVISIBLE_SKIN -->
+<div id="INVISIBLE_SKIN" class="  wikia-ad noprint default-height   hidden">
+<script>
+	window.adslots2.push(["INVISIBLE_SKIN",null,"AdEngine2"]);
+</script>
+<div data-gpt-slot-sizes="[[1000,1000],[1,1]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;top&quot;,&quot;pos&quot;:&quot;INVISIBLE_SKIN&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="INVISIBLE_SKIN_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/INVISIBLE_SKIN_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/INVISIBLE_SKIN_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/INVISIBLE_SKIN_gpt_0" height="1000" width="1000" frameborder="0"></iframe></div></div></div>
+<!-- END SLOTNAME: INVISIBLE_SKIN -->
+
+</div>
+
+
+<section id="WikiaPage" class="WikiaPage V2">
+	<div id="WikiaPageBackground" class="WikiaPageBackground"></div>
+	<div class="WikiaPageContentWrapper">
+		<header id="WikiHeader" class="WikiHeader">
+	<h1 class="wordmark medium text ">
+	<a accesskey="z" href="http://es.openerp.wikia.com/wiki/Portada">
+					OpenERP Wiki			</a>
+</h1>
+        <div class="WikiHeaderSearch">
+        
+<form id="HeaderWikiaSearch" class="WikiaSearch" action="http://es.openerp.wikia.com/wiki/Especial:Buscar" method="get">
+	<input name="search" placeholder="Buscar en OpenERP Wiki" autocomplete="off" accesskey="f" type="text">
+	<input name="fulltext" value="Search" type="hidden">
+			<input name="ns0" value="1" type="hidden">
+			<input name="ns14" value="1" type="hidden">
+		<input type="submit">
+	<button class="wikia-button"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite search" height="17" width="21"></button>
+</form>
+    </div>
+        <nav class="WikiNav">
+    	        <h1>Navegación de OpenERP Wiki</h1>
+        		<ul class="nav">
+																				<li class="nav-item marked">
+						<a href="#">Wiki</a>
+
+													<ul class="subnav-2 accent firstChild">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Especial:WikiActivity" data-canonical="wikiactivity">Wiki Actividad</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Especial:Aleatoria" data-canonical="random">Página aleatoria</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Especial:V%C3%ADdeos" data-canonical="videos">Vídeos</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Especial:NuevasIm%C3%A1genes" data-canonical="newfiles">Imágenes nuevas</a>
+
+																			</li>
+																							</ul>
+											</li>
+																												<li class="nav-item">
+						<a href="#">Contenido del Wiki</a>
+
+													<ul style="" class="subnav-2 accent">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Newly_changed_articles">Páginas actualizadas<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul style="display: none;" class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Como_realizar_el_an%C3%A1lisis_inicial_para_implantar_un_ERP">Como realizar el análisis inicial para implantar un ERP</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Pedidos_de_Venta_SIN_ARTICULO_en_openERP">Pedidos de Venta SIN ARTICULO en openERP</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Portada">Portada</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Tutorial_de_Python_%27Python_para_todos%27">Tutorial de Python 'Python para todos'</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10">Instalar OpenERP en Linux Mint o Ubuntu 8.10</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/El_concepto_del_sw_libre._Es_libre._No_gratis.">El concepto del sw libre. Es libre. No gratis.</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Problemas_de_instalaci%C3%B3n_de_OpenERP_en_Windows">Problemas de instalación de OpenERP en Windows</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:Categor%C3%ADas_ocultas">Categorías ocultas<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul style="display: none;" class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:BlogListingPage">BlogListingPage</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:P%C3%A1ginas_con_enlaces_rotos_a_archivos">Páginas con enlaces rotos a archivos</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:OpenERP_Localizaci%C3%B3n">OpenERP Localización<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul style="display: none;" class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Portada">Portada</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Localizaci%C3%B3n_M%C3%A9xico">Localización México</a>
+													</li>
+																							</ul>
+																			</li>
+																							</ul>
+											</li>
+																				<li class="nav-item">
+						<a href="http://es.openerp.wikia.com/wiki/OpenERP_Wiki:Portal_de_la_comunidad">Comunidad</a>
+
+													<ul style="" class="subnav-2 accent">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Blog:Recent_posts">Entradas de Blog recientes</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Foro:Index">Foro</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:Plantillas">Plantillas</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Ayuda:Contenido">Páginas de ayuda</a>
+
+																			</li>
+																							</ul>
+											</li>
+																				<li class="nav-item">
+						<a href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:Administraci%C3%B3n_del_sitio">Administración</a>
+
+													<ul style="" class="subnav-2 accent">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Especial:AdminDashboard">Panel de administración<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul style="display: none;" class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:ThemeDesigner">Diseñador del wiki</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:CambiosRecientes">Cambios recientes</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/MediaWiki:Wiki-navigation">Panel de navegación</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:FuncionalidadesDeWikia">Activar funcionalidades</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:Promocionar">Promocionar comunidad</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:P%C3%A1ginasEspeciales">Páginas especiales</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://community.wikia.com/wiki/c:comunidad:project:Solicitudes">Solicitudes<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul style="display: none;" class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://community.wikia.com/wiki/c:comunidad:project:Spotlights">Spotlights</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://community.wikia.com/wiki/c:comunidad:project:Dise%C3%B1os_y_portadas">Diseños</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://community.wikia.com/wiki/c:comunidad:project:Adopci%C3%B3n">Adopciones</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://community.wikia.com/wiki/c:comunidad:project:Mentores">Mentores</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:Contactar/wiki-name-change">Nombre de la comunidad</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://community.wikia.com/wiki/c:comunidad:Especial:Chat">Chat con usuarios de Wikia</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="http://es.openerp.wikia.com/wiki/Especial:Contactar">Contacta con Wikia</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="http://es.openerp.wikia.com/wiki/Ayuda:Administraci%C3%B3n_Comunitaria">Páginas de ayuda</a>
+
+																			</li>
+																							</ul>
+											</li>
+										</ul>
+
+<div class="navbackground">
+	<div></div>
+	<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+</div>    </nav>
+	    <div class="buttons">
+		<nav class="wikia-menu-button contribute secondary combined">
+	<img alt="" class="sprite contribute" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" height="16" width="22"> Contribuir
+	<span class="drop">
+		<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+	</span>
+	<ul class="WikiaMenuElement">
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?action=edit" data-id="edit">Editar esta página</a>
+		</li>
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Especial:A%C3%B1adirV%C3%ADdeo" data-id="wikiavideoadd">Añadir un vídeo</a>
+		</li>
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Especial:SubirArchivo" data-id="upload">Añadir una imagen</a>
+		</li>
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Especial:CrearP%C3%A1gina" data-id="createpage" class="createpage">Crear una página</a>
+		</li>
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Especial:WikiActivity" accesskey="g" data-id="wikiactivity">Wiki Actividad</a>
+		</li>
+	</ul>
+</nav>
+					<a href="#" class="wikia-button share-button secondary" data-id="shareButton"> Compartir<span class="share-dot"></span><span class="share-pixel"></span></a>
+    </div>
+	    <div class="hiddenLinks">
+		<a href="http://es.openerp.wikia.com/wiki/Especial:Seguimiento" title="Especial:Seguimiento" accesskey="l">Lista de seguimiento</a>		<a href="http://es.openerp.wikia.com/wiki/Especial:Aleatoria" title="Especial:Aleatoria" accesskey="x">Página aleatoria</a>		<a href="http://es.openerp.wikia.com/wiki/Especial:CambiosRecientes" title="Especial:CambiosRecientes" accesskey="r">Cambios recientes</a>    </div>
+</header>
+
+
+		
+		
+		
+		
+		<article id="WikiaMainContent" class="WikiaMainContent">
+			<div id="WikiaMainContentContainer" class="WikiaMainContentContainer">
+				<header id="WikiaPageHeader" class="WikiaPageHeader">
+    <h1>Instalar OpenERP en Linux Mint o Ubuntu 8.10</h1>
+
+	<nav class="wikia-menu-button">
+	<a accesskey="e" href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?veaction=edit" data-id="ve-edit" id="ca-ve-edit">
+		<img alt="" class="sprite edit-pencil" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" height="16" width="22"> Editar	</a>
+
+	<span class="drop">
+		<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+	</span>
+	<ul class="WikiaMenuElement">
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?action=edit" accesskey="s" data-id="edit" id="ca-edit">Editor Clásico</a>
+		</li>
+		<li>
+			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?action=history" accesskey="h" data-id="history" id="ca-history">Historial</a>
+		</li>
+	</ul>
+</nav>
+			<a accesskey="t" href="http://es.openerp.wikia.com/wiki/Discusi%C3%B3n:Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" class="wikia-button comments secondary talk" rel="nofollow" data-id="comment"> Discusión<span class="commentsbubble">0</span></a>
+        <div class="tally">
+			<em>28</em><span class="$2">páginas en el wiki</span>        </div>
+		</header>
+
+
+
+
+
+<script>
+    if (window.fromsearch 
+    && typeof(Wikia.geo) !== 'undefined' && ['CA','DE','US','AU','GB','UK'].indexOf(Wikia.geo.getCountryCode()) < 0
+) {
+        document.write(
+            '<div id="monetization-adunit-below_title" class="monetization-module adunit">' +
+            '<style>.ad-responsive { width: 320px; height: 50px; }' +
+            '@media(max-width: 400px) { .ad-responsive { display: none; } }' +
+            '@media(min-width: 500px) { .ad-responsive { width: 468px; height: 60px; } }' +
+            '@media(min-width: 800px) { .ad-responsive { width: 690px; height: 90px; } }' +
+            '@media(min-width: 1031px) { .ad-responsive { width: 700px; height: 90px; } }' +
+            '@media(min-width: 1410px) { .ad-responsive { width: 728px; height: 90px; } }' +
+            '</style><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">' +
+            '</scr' + 'ipt><ins class="adsbygoogle ad-responsive" style="display:inline-block;" ' +
+            'data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bc_bt_ic_fsl_ffv mon_hub_other mon_sl_bt" ' +
+            'data-ad-type="text" ' + 
+    'data-font-size="large" ' +
+
+
+
+    'data-font-face="veranda" ' +
+
+            ' data-color-bg="#ffffff" data-color-border="#ffffff" data-color-link="#006cb0" data-color-url="#006cb0" data-color-text="#3a3a3a" ></ins>' +
+            '<script>(adsbygoogle = window.adsbygoogle || []).push({});</scr' + 'ipt></div>');
+    }
+</script><div id="monetization-adunit-below_title" class="monetization-module adunit"><style>.ad-responsive { width: 320px; height: 50px; }@media(max-width: 400px) { .ad-responsive { display: none; } }@media(min-width: 500px) { .ad-responsive { width: 468px; height: 60px; } }@media(min-width: 800px) { .ad-responsive { width: 690px; height: 90px; } }@media(min-width: 1031px) { .ad-responsive { width: 700px; height: 90px; } }@media(min-width: 1410px) { .ad-responsive { width: 728px; height: 90px; } }</style><script async="" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/adsbygoogle.js"></script><ins class="adsbygoogle ad-responsive" style="display:inline-block;" data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bc_bt_ic_fsl_ffv mon_hub_other mon_sl_bt" data-ad-type="text" data-font-size="large" data-font-face="veranda" data-color-bg="#ffffff" data-color-border="#ffffff" data-color-link="#006cb0" data-color-url="#006cb0" data-color-text="#3a3a3a"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+				
+				<div id="WikiaArticle" class="WikiaArticle">
+					
+					<div class="home-top-right-ads top-right-ads-in-content">
+					<!-- BEGIN SLOTNAME: TOP_INCONTENT_BOXAD -->
+<div id="TOP_INCONTENT_BOXAD" class="  wikia-ad noprint default-height  ">
+<script>
+	window.adslots2.push(["TOP_INCONTENT_BOXAD",null,"AdEngine2"]);
+</script>
+<div data-gpt-slot-sizes="[[300,250]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;top&quot;,&quot;pos&quot;:&quot;TOP_INCONTENT_BOXAD&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="TOP_INCONTENT_BOXAD_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_INCONTENT_BOXAD_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_INCONTENT_BOXAD_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_INCONTENT_BOXAD_gpt_0" height="250" width="300" frameborder="0"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_INCONTENT_BOXAD_gpt_0__hidden__" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_INCONTENT_BOXAD_gpt_0__hidden__" height="0" width="0" frameborder="0"></iframe></div></div>
+<!-- END SLOTNAME: TOP_INCONTENT_BOXAD -->
+					</div>
+
+					
+					<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="es"><p>Este tutorial fue probado con Linux Mint 6, por lo cual para los usuarios de Ubuntu intrepid les servirá también.
+</p><p>OpenERP es uno de los mejores ERP open source que existen. Es 
+modular, por lo cual se adecua a las necesidades de cada empresa ya sea 
+pequeña, mediana o grande. Maneja información muy órdenada, lo cual 
+facilita su rápido aprendizaje y adaptación. Fácil configuración, en 
+poco menos de media hora se puede tener funcionando. Para más detalles 
+ver la página oficial.
+</p><p>Para instalarlo debemos configurar 3 cosas. La base de datos de 
+postgres, el servidor del OpenERP, y los clientes de OpenERP (Web y/o 
+Escritorio).
+</p><p>0. Dependencias.
+</p><p>Comenzaremos instalado algunas dependencias de python para instalar el ERP.
+</p>
+<ol><li> sudo apt-get install python python-psycopg2 python-reportlab 
+python-egenix-mxdatetime python-xml python-tz python-pychart 
+python-pydot python-lxml python-libxslt1 python-vobject
+</li></ol>
+<p>1. Base de datos.
+</p><p>La base de datos que se utiliza es la de postgres. Debemos 
+configurar nuestro usuario (con el que iniciamos el ambiente gráfico) 
+con postgres.
+Primero instalaremos.
+</p>
+<ol><li> sudo apt-get install postgresql
+</li></ol>
+<p>Luego creamos el usuario que se utilizará el servidor de OpenERP para
+ conectarse a postgres. Debe de ser el usuario del sistema, en mi caso 
+se llama “alan”.
+</p><p>alan:~# sudo su - postgres -c psql
+password: *******
+postgres=# createuser --createdb --no-createrole --pwprompt alan
+Enter password for new role: *******
+Enter it again: XXXXXXXXXX
+Shall the new role be a superuser? (y/n) y
+postgres=# create database alan;
+CREATE DATABASE
+postgres-# \q
+Tuve que crear la base de datos con mi mismo nombre de usuario para que 
+se pudiera conectar con postgres. El password que coloqué es el mismo 
+que el de mi cuenta de usuario.
+</p><p>Comprobamos que nuestro usuario se pueda conectar a postgres.
+alan:~# psql
+Debería de conectarnos con postgres
+</p>
+<pre>   Welcome to psql 8.3.7, the PostgreSQL interactive terminal.
+   Type: \copyright for distribution terms
+   \h for help with SQL commands
+   \? for help with psql commands
+   \g or terminate with semicolon to execute query
+   \q to quit
+</pre>
+<p>alan=# \q
+</p><p>2. OpenERP Server
+</p><p>Proseguimos a bajar los paquetes y a instalar El servidor de OpenERP.
+</p>
+<ol><li> cd /opt/
+</li><li> sudo wget <a rel="nofollow" class="external free exitstitial" href="http://www.openerp.com/download/stable/source/openerp-server-5.0.1-0.tar.gz">http://www.openerp.com/download/stable/source/openerp-server-5.0.1-0.tar.gz</a>
+</li><li> sudo tar -xvzf openerp*
+</li><li> sudo mv openerp-server-5.0.1-0/ OpenERP-server/
+</li><li> sudo rm openerp-server-5.0.1-0.tar.gz
+</li><li> cd OpenERP-server/
+</li><li> sudo python setup.py install
+</li></ol>
+<p>Identificados como nuestro usuario en terminal, ya podremos arrancar nuestro servidor con:
+</p>
+<ol><li> openerp-server
+</li></ol>
+<p>Ctrl+c, para detenerlo.
+</p><p>Si queremos que arranque automáticamente cuando iniciemos sesión.
+Desde el panel de gnome. En aplicaciones, preferencias, sesiones. 
+Configuramos una nueva aplicación como se muestra en la imágen.
+</p>
+<figure class="article-thumb tright show-info-icon" style="width: 180px"> 	<a href="http://img4.wikia.nocookie.net/__cb20090609153935/openerp/es/images/2/20/Openerp-sesion.png" class="image image-thumbnail"><img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/180px-Openerp-sesion.png" alt="Openerp-sesion.png" class="thumbimage " data-image-key="Openerp-sesion.png" data-image-name="Openerp-sesion.png" height="146" width="180"></a>  	<figcaption> 		 			<a href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-sesion.png" class="sprite info-icon"></a> 		 		 		 	</figcaption> </figure>
+<p><br>
+3. OpenERP Client
+</p><p>Se puede instalar de cliente un programa de escritorio o via web.
+ Revisaremos los dos casos. Hay un cliente de escritorio para Windows en
+ el sitio oficial. El cliente de escritorio se debe instalar en cada una
+ de las computadoras que se deseen conectar mediante la ventana.
+</p><p>3.1 OpenERP Cliente Escritorio
+</p><p>Una imágen para mostrar el cliente de escritorio.
+</p>
+<figure class="article-thumb tright show-info-icon" style="width: 180px"> 	<a href="http://img1.wikia.nocookie.net/__cb20090609154017/openerp/es/images/2/25/Openerp-escritorio.png" class="image image-thumbnail"><img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/180px-Openerp-escritorio.png" alt="Openerp-escritorio.png" class="thumbimage " data-image-key="Openerp-escritorio.png" data-image-name="Openerp-escritorio.png" height="113" width="180"></a>  	<figcaption> 		 			<a href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-escritorio.png" class="sprite info-icon"></a> 		 		 		 	</figcaption> </figure>
+<p><br>
+Para instalarlo
+</p>
+<ol><li> cd /opt/
+</li><li> sudo wget <a rel="nofollow" class="external free exitstitial" href="http://www.openerp.com/download/stable/source/openerp-client-5.0.1-0.tar.gz">http://www.openerp.com/download/stable/source/openerp-client-5.0.1-0.tar.gz</a>
+</li><li> sudo tar -xvzf openerp*
+</li><li> sudo mv openerp-client-5.0.1-0 OpenERP-client
+</li><li> sudo rm openerp-client-5.0.1-0.tar.gz
+</li><li> cd cd OpenERP-client/
+</li><li> sudo python setup.py install
+</li></ol>
+<p>Aquí podremos arrancarlo con el comando
+</p>
+<ol><li> openerp-client
+</li></ol>
+<p>Si queremos agregarlo a nuestro panel de gnome. Creamos un lanzador nuevo.
+</p>
+<ol><li> sudo gedit /usr/share/applications/openerp-client.desktop
+</li></ol>
+<p>Copiamos y pegamos el texto a continuación.
+</p><p>[Desktop Entry]
+Name=OpenERP
+Name[es]=OpenERP
+Comment=OpenERP Client
+Comment[es]=Cliente de OpenERP
+TryExec=openerp-client
+Exec=openerp-client
+Icon=/usr/share/pixmaps/openerp-client/openerp-icon.png
+Type=Application
+Categories=Application;Office;openERP;
+StartupNotify=false
+X-Ubuntu-Gettext-Domain=openerp-client
+</p><p>Guardamos, y nos aparecerá en el menú en la sección de Office u Ofimática.
+</p><p>3.1 OpenERP Cliente Web
+</p><p>Una imágen para mostrar el cliente web.
+</p><p><br>
+</p>
+<figure class="article-thumb tright show-info-icon" style="width: 180px"> 	<a href="http://img3.wikia.nocookie.net/__cb20090609154111/openerp/es/images/5/5d/Openerp-web.png" class="image image-thumbnail"><img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/180px-Openerp-web.png" alt="Openerp-web.png" class="thumbimage " data-image-key="Openerp-web.png" data-image-name="Openerp-web.png" height="113" width="180"></a>  	<figcaption> 		 			<a href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-web.png" class="sprite info-icon"></a> 		 		 		 	</figcaption> </figure>
+<p><br>
+Este cliente solamente se instala en en servidor, y las demás computadoras se conectan vía IP con un navegador de internet.
+</p><p>Necesitamos instalar TurboGears
+</p>
+<ol><li> sudo easy_install TurboGears==1.0.8
+</li></ol>
+<p>Ahora instalamos el cliente web de OpenERP
+</p>
+<ol><li> sudo easy_install -U openerp-web
+</li></ol>
+<p>El archivo de configuración se ubicará en: 
+/usr/lib/python2.5/site-packages/openerp_web-5.0.0_3.1-py2.5.egg/config/default.cfg
+En
+ caso de que tengan ocupado el puerto de 8080, posiblemente por tomcat, 
+se deberá modificar ese archivo y cambiarle de puerto para conectarse. 
+Yo utilizo el puerto 8000, y me conecto mediante <a rel="nofollow" class="external free exitstitial" href="http://localhost:8000/">http://localhost:8000/</a>
+</p><p>Para iniciar el servicio, en terminal simplemente:
+</p>
+<ol><li> start-openerp-web
+</li></ol>
+<p>Pero si queremos que lo arranque automáticamente como un demonio, una
+ vez que se cargue nuestro sistema operativo. Debemos realizar lo 
+siguiente:
+</p>
+<ol><li> sudo cp /usr/lib/python2.5/site-packages/openerp_web-5.0.0_3.1-py2.5.egg/scripts/openerp-web /etc/init.d
+</li><li> sudo cp /usr/lib/python2.5/site-packages/openerp_web-5.0.0_3.1-py2.5.egg/config/default.cfg /etc/openerp-web.cfg
+</li></ol>
+<p>sudo chmod +x /etc/init.d/openerp-web
+</p><p>Nos aseguramos de configurar el usuario
+sudo gedit /etc/init.d/openerp-web
+En mi caso cambiaré:
+</p><p>USER="terp"
+</p><p>Por:
+</p><p>USER="alan"
+</p><p>También necesitamos modificar la ruta del historial de logs.
+</p>
+<ol><li> sudo gedit /etc/openerp-web.cfg
+</li></ol>
+<p>Buscamos la siguiente línea:
+</p><p>args="('server.log',)"
+</p><p>La remplazamos por:
+</p><p>args="('/var/log/openerp-web.log',)"
+</p><p>Casi por último nos aseguramos que nuestro usuario sea propietario del archivo de openerp-web.log.
+</p>
+<ol><li> sudo touch /var/log/openerp-web.log
+</li><li> sudo chown terp /var/log/openerp-web.log
+</li></ol>
+<p>Ahora así, añadimos el cliente (o servidor) web de OpenERP al arranque.
+</p>
+<ol><li> sudo update-rc.d openerp-web defaults
+</li></ol>
+<p>Y arrancamos el servicio:
+</p>
+<ol><li> sudo /etc/init.d/openerp-web start
+</li></ol>
+<p>Nota: Para que funcionen los clientes debe de estar funcionando el 
+serividor. Es decir el comando de openerp-server debe de estar 
+corriendo. Despues de aquí, se crea con cualquier cliente una nueva base
+ de datos, y con el asistenten seguir los pasos. También, deberían de 
+leer la documentación de OpenERP que vale la pena.
+</p><p>Saludos y éxito.
+</p><p><br>
+fuente:aprendizdelinux
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/300000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key esopenerp:pcache:idhash:57-0!*!*!*!*!2!* -->
+<noscript><link rel="stylesheet" href="http://slot1.images.wikia.nocookie.net/__cb1414084466/common/extensions/wikia/ImageLazyLoad/css/ImageLazyLoadNoScript.css" /></noscript><noscript><link rel="stylesheet" href="http://slot1.images.wikia.nocookie.net/__cb1414084466/common/extensions/wikia/TOCimprovements/TOCNoScript.css" /></noscript></div><div class="printfooter">
+Obtenido de «<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?oldid=103">http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10?oldid=103</a>»</div>
+
+
+
+
+
+<script>
+    if (window.fromsearch ) {
+        document.write(
+            '<div id="monetization-adunit-in_content" class="monetization-module adunit">' +
+            '<style>.ad-responsive { width: 320px; height: 50px; }' +
+            '@media(max-width: 400px) { .ad-responsive { display: none; } }' +
+            '@media(min-width: 500px) { .ad-responsive { width: 468px; height: 60px; } }' +
+            '@media(min-width: 800px) { .ad-responsive { width: 690px; height: 90px; } }' +
+            '@media(min-width: 1031px) { .ad-responsive { width: 700px; height: 90px; } }' +
+            '@media(min-width: 1410px) { .ad-responsive { width: 728px; height: 90px; } }' +
+            '</style><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">' +
+            '</scr' + 'ipt><ins class="adsbygoogle ad-responsive" style="display:inline-block;" ' +
+            'data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bc_bt_ic_fsl_ffv mon_hub_other mon_sl_ic" ' +
+            'data-ad-type="text" ' + 
+    'data-font-size="large" ' +
+
+
+
+    'data-font-face="veranda" ' +
+
+            ' data-color-bg="#ffffff" data-color-border="#ffffff" data-color-link="#006cb0" data-color-url="#006cb0" data-color-text="#3a3a3a" ></ins>' +
+            '<script>(adsbygoogle = window.adsbygoogle || []).push({});</scr' + 'ipt></div>');
+    }
+</script><div id="monetization-adunit-in_content" class="monetization-module adunit"><style>.ad-responsive { width: 320px; height: 50px; }@media(max-width: 400px) { .ad-responsive { display: none; } }@media(min-width: 500px) { .ad-responsive { width: 468px; height: 60px; } }@media(min-width: 800px) { .ad-responsive { width: 690px; height: 90px; } }@media(min-width: 1031px) { .ad-responsive { width: 700px; height: 90px; } }@media(min-width: 1410px) { .ad-responsive { width: 728px; height: 90px; } }</style><script async="" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/adsbygoogle.js"></script><ins class="adsbygoogle ad-responsive" style="display:inline-block;" data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bc_bt_ic_fsl_ffv mon_hub_other mon_sl_ic" data-ad-type="text" data-font-size="large" data-font-face="veranda" data-color-bg="#ffffff" data-color-border="#ffffff" data-color-link="#006cb0" data-color-url="#006cb0" data-color-text="#3a3a3a"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+				</div>
+
+															<nav class="WikiaArticleCategories CategorySelect articlePage userCanEdit" id="WikiaArticleCategories">
+	<div class="container">
+		<div class="special-categories"><a href="http://es.openerp.wikia.com/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías" class="categoriesLink" rel="nofollow">Categorías</a>:</div>
+		<ul class="categories">
+				<li class="category normal" data-name="General" data-namespace="" data-outertag="" data-sortkey="" data-type="normal">
+	<span class="name"><a href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:General" title="Categoría:General">General</a></span>
+	<ul class="toolbar">
+		<li class="tool editCategory"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite-small edit" title=""></li>
+		<li class="tool removeCategory"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite-small delete" title=""></li>
+	</ul>
+</li>							<li class="last">
+					<button class="wikia-button secondary add" id="CategorySelectAdd" type="button">Agregar categoría</button>
+					<input autocomplete="off" class="input" id="CategorySelectInput" name="CategorySelectInput" placeholder="Añadir una categoría..." type="text">				</li>
+					</ul>
+	</div>
+			<div class="toolbar">
+			<button class="wikia-button secondary cancel" id="CategorySelectCancel" type="button">Cancelar</button>
+			<button class="wikia-button save" id="CategorySelectSave" type="button" disabled="disabled">Guardar</button>
+		</div>
+	</nav>									
+				
+				
+									<div id="WikiaArticleFooter" class="WikiaArticleFooter">
+						<div id="RelatedPagesModuleWrapper"></div>					</div>
+				
+								<div id="WikiaArticleBottomAd" class="noprint">
+					<!-- BEGIN SLOTNAME: PREFOOTER_LEFT_BOXAD -->
+<div id="PREFOOTER_LEFT_BOXAD" class=" wikia-ad noprint default-height ">
+<script>
+	window.adslots2.push(["PREFOOTER_LEFT_BOXAD",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: PREFOOTER_LEFT_BOXAD -->
+					<!-- BEGIN SLOTNAME: PREFOOTER_RIGHT_BOXAD -->
+<div id="PREFOOTER_RIGHT_BOXAD" class=" wikia-ad noprint default-height ">
+<script>
+	window.adslots2.push(["PREFOOTER_RIGHT_BOXAD",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: PREFOOTER_RIGHT_BOXAD -->
+				</div>
+			</div>
+		</article><!-- WikiaMainContent -->
+
+					<div id="WikiaRail" class="WikiaRail loaded">
+
+	
+<form id="WikiaSearch" class="WikiaSearch" action="http://es.openerp.wikia.com/wiki/Especial:Buscar" method="get">
+	<input name="search" placeholder="Buscar en OpenERP Wiki" autocomplete="off" accesskey="f" type="text">
+	<input name="fulltext" value="Search" type="hidden">
+			<input name="ns0" value="1" type="hidden">
+			<input name="ns14" value="1" type="hidden">
+		<input type="submit">
+	<button class="wikia-button"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite search" height="17" width="21"></button>
+</form>
+<!-- BEGIN SLOTNAME: TOP_RIGHT_BOXAD -->
+<div id="TOP_RIGHT_BOXAD" class="  wikia-ad noprint default-height   hidden">
+<script>
+	window.adslots2.push(["TOP_RIGHT_BOXAD",null,"AdEngine2"]);
+</script>
+<div data-gpt-slot-sizes="[[300,250],[300,600],[300,1050]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;top&quot;,&quot;pos&quot;:&quot;TOP_RIGHT_BOXAD&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="TOP_RIGHT_BOXAD_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_RIGHT_BOXAD_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_RIGHT_BOXAD_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/TOP_RIGHT_BOXAD_gpt_0" height="250" width="300" frameborder="0"></iframe></div></div></div>
+<!-- END SLOTNAME: TOP_RIGHT_BOXAD -->
+			
+	
+<section class="LatestPhotosModule module" id="LatestPhotosModule">
+	<h1 class="tight">Últimas imágenes</h1>
+	<a data-original-title="Añadir una imagen a esta wikia" href="http://es.openerp.wikia.com/wiki/Especial:SubirArchivo" class="wikia-button upphotos" rel="tooltip"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite photo" height="0" width="0"> Añadir imagen</a>	<div class="tally counter">
+		<em>17</em><span class="fixedwidth">imágenes en este wiki</span>	</div>
+
+			<a href="#" class="previous disabled"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="latest-images-left" height="0" width="0"></a>
+		<a href="#" class="next"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="latest-images-right" height="0" width="0"></a>
+	<div class="carousel-container">
+		<div>
+			<ul style="width: 1032px;" class="carousel">
+	
+		<li class="thumbs active"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Python.jpeg">
+			<img class="thumbimage" data-image-name="Python.jpeg" data-image-key="Python.jpeg" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-04830483-Python.jpg" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-06-09T16:09:45Z" class="timeago" datetime="2009-06-09T16:09:45Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Tutorial_de_Python_%27Python_para_todos%27" title="Tutorial de Python 'Python para todos'" class="wikia-gallery-item-posted">Tutorial de Python 'Python para todos'</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-web.png">
+			<img class="thumbimage" data-image-name="Openerp-web.png" data-image-key="Openerp-web.png" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-24110420800-Openerp-web.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-06-09T15:41:11Z" class="timeago" datetime="2009-06-09T15:41:11Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" title="Instalar OpenERP en Linux Mint o Ubuntu 8.10" class="wikia-gallery-item-posted">Instalar OpenERP en Linux Mint o Ubuntu 8.10</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-escritorio.png">
+			<img class="thumbimage" data-image-name="Openerp-escritorio.png" data-image-key="Openerp-escritorio.png" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-24110420800-Openerp-escritorio.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-06-09T15:40:17Z" class="timeago" datetime="2009-06-09T15:40:17Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" title="Instalar OpenERP en Linux Mint o Ubuntu 8.10" class="wikia-gallery-item-posted">Instalar OpenERP en Linux Mint o Ubuntu 8.10</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Openerp-sesion.png">
+			<img class="thumbimage" data-image-name="Openerp-sesion.png" data-image-key="Openerp-sesion.png" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-534960442-Openerp-sesion.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-06-09T15:39:35Z" class="timeago" datetime="2009-06-09T15:39:35Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10" title="Instalar OpenERP en Linux Mint o Ubuntu 8.10" class="wikia-gallery-item-posted">Instalar OpenERP en Linux Mint o Ubuntu 8.10</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Opmodules_enterprise.jpg">
+			<img class="thumbimage" data-image-name="Opmodules+enterprise.jpg" data-image-key="Opmodules_enterprise.jpg" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-07600760-Opmodules_enterprise.jpg" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-05-01T17:08:29Z" class="timeago" datetime="2009-05-01T17:08:29Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Categor%C3%ADa:General" title="Categoría:General" class="wikia-gallery-item-posted">Categoría:General</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Impuestos2.png">
+			<img class="thumbimage" data-image-name="Impuestos2.png" data-image-key="Impuestos2.png" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/82px-882360147-Impuestos2.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-05-01T16:20:11Z" class="timeago" datetime="2009-05-01T16:20:11Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Configuraci%C3%B3n_de_Impuestos_en_OpenERP" title="Configuración de Impuestos en OpenERP" class="wikia-gallery-item-posted">Configuración de Impuestos en OpenERP</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Impuestos1.png">
+			<img class="thumbimage" data-image-name="Impuestos1.png" data-image-key="Impuestos1.png" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" data-src="http://img4.wikia.nocookie.net/__cb20090501161944/openerp/es/images/thumb/2/20/Impuestos1.png/82px-0%2C223%2C0%2C223-Impuestos1.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-05-01T16:19:44Z" class="timeago" datetime="2009-05-01T16:19:44Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Configuraci%C3%B3n_de_Impuestos_en_OpenERP" title="Configuración de Impuestos en OpenERP" class="wikia-gallery-item-posted">Configuración de Impuestos en OpenERP</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Impuestos.png">
+			<img class="thumbimage" data-image-name="Impuestos.png" data-image-key="Impuestos.png" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" data-src="http://img1.wikia.nocookie.net/__cb20090501161900/openerp/es/images/thumb/2/26/Impuestos.png/82px-0%2C221%2C0%2C221-Impuestos.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-05-01T16:19:00Z" class="timeago" datetime="2009-05-01T16:19:00Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Configuraci%C3%B3n_de_Impuestos_en_OpenERP" title="Configuración de Impuestos en OpenERP" class="wikia-gallery-item-posted">Configuración de Impuestos en OpenERP</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Suite_de_Negocios_con_openERP.png">
+			<img class="thumbimage" data-image-name="Suite+de+Negocios+con+openERP.png" data-image-key="Suite_de_Negocios_con_openERP.png" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" data-src="http://img1.wikia.nocookie.net/__cb20090426005039/openerp/es/images/thumb/0/0b/Suite_de_Negocios_con_openERP.png/82px-211%2C507%2C0%2C295-Suite_de_Negocios_con_openERP.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-04-26T00:50:39Z" class="timeago" datetime="2009-04-26T00:50:39Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Portada" title="Portada" class="wikia-gallery-item-posted">Portada</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Wiki.png">
+			<img class="thumbimage" data-image-name="Wiki.png" data-image-key="Wiki.png" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" data-src="http://img4.wikia.nocookie.net/__cb20090419161509/openerp/es/images/thumb/b/bc/Wiki.png/82px-0%2C135%2C0%2C135-Wiki.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-04-19T16:15:09Z" class="timeago" datetime="2009-04-19T16:15:09Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Gu%C3%ADa_de_edici%C3%B3n_de_p%C3%A1ginas" title="Guía de edición de páginas" class="wikia-gallery-item-posted">Guía de edición de páginas</a>				</span>
+		</li>
+	
+		<li class="thumbs"><a class="image" href="http://es.openerp.wikia.com/wiki/Archivo:Opensource.png">
+			<img class="thumbimage" data-image-name="Opensource.png" data-image-key="Opensource.png" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" data-src="http://img1.wikia.nocookie.net/__cb20090419152137/openerp/es/images/thumb/6/61/Opensource.png/82px-18%2C235%2C0%2C216-Opensource.png" height="82" width="82">
+		</a>
+
+		<span class="thumbcaption">
+			por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio" class="new" title="Usuario:Dynahiaudio (aún no está redactado)">Dynahiaudio</a><br>
+			<time title="2009-04-19T15:21:37Z" class="timeago" datetime="2009-04-19T15:21:37Z">hace 5 años</time><br>
+
+						Publicada en			<a href="http://es.openerp.wikia.com/wiki/Portada" title="Portada" class="wikia-gallery-item-posted">Portada</a>				</span>
+		</li>
+				<li class="see-all">
+			<a href="http://es.openerp.wikia.com/wiki/Especial:NuevasIm%C3%A1genes" title="Especial:NuevasImágenes">Ver todas las imágenes</a>		</li>
+				</ul>
+		</div>
+	</div>
+	<a href="http://es.openerp.wikia.com/wiki/Especial:NuevasIm%C3%A1genes" title="Especial:NuevasImágenes" class="more">Ver todas las imágenes &gt;</a>
+
+</section>
+<!-- BEGIN SLOTNAME: MIDDLE_RIGHT_BOXAD -->
+<div id="MIDDLE_RIGHT_BOXAD" class="wikia-ad noprint default-height">
+
+</div>
+<!-- END SLOTNAME: MIDDLE_RIGHT_BOXAD -->
+<section class="WikiaActivityModule module" id="WikiaRecentActivity">
+	<h1 class="activity-heading">Actividad Reciente</h1>
+	<ul>
+		<li>
+			<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite edit" height="20" width="20">
+			<em><a href="http://es.openerp.wikia.com/wiki/Como_realizar_el_an%C3%A1lisis_inicial_para_implantar_un_ERP">Como realizar el análisis inicial para implantar un ERP</a></em>
+			<div class="edited-by">editado por <a href="http://es.openerp.wikia.com/wiki/Especial:Contribuciones/187.254.213.167">Un usuario de Wikia</a> </div>
+		</li>
+		<li>
+			<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite edit" height="20" width="20">
+			<em><a href="http://es.openerp.wikia.com/wiki/Portada">Portada</a></em>
+			<div class="edited-by">editado por <a href="http://es.openerp.wikia.com/wiki/Especial:Contribuciones/94.143.28.94">Un usuario de Wikia</a> </div>
+		</li>
+		<li>
+			<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite edit" height="20" width="20">
+			<em><a href="http://es.openerp.wikia.com/wiki/Pedidos_de_Venta_SIN_ARTICULO_en_openERP">Pedidos de Venta SIN ARTICULO en openERP</a></em>
+			<div class="edited-by">editado por <a href="http://es.openerp.wikia.com/wiki/Especial:Contribuciones/94.143.28.94">Un usuario de Wikia</a> </div>
+		</li>
+		<li>
+			<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="sprite edit" height="20" width="20">
+			<em><a href="http://es.openerp.wikia.com/wiki/Tutorial_de_Python_%27Python_para_todos%27">Tutorial de Python 'Python para todos'</a></em>
+			<div class="edited-by">editado por <a href="http://es.openerp.wikia.com/wiki/Usuario:Dynahiaudio">Dynahiaudio</a> </div>
+		</li>
+	</ul>
+
+			<a href="http://es.openerp.wikia.com/wiki/Especial:WikiActivity" title="Especial:WikiActivity" class="more">Ver más &gt;</a>	</section>
+<!-- BEGIN SLOTNAME: LEFT_SKYSCRAPER_2 -->
+<div id="LEFT_SKYSCRAPER_2" class="  wikia-ad noprint default-height   hidden">
+
+<div data-gpt-slot-sizes="[[160,600]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;middle&quot;,&quot;pos&quot;:&quot;LEFT_SKYSCRAPER_2&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="LEFT_SKYSCRAPER_2_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/LEFT_SKYSCRAPER_2_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/LEFT_SKYSCRAPER_2_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/LEFT_SKYSCRAPER_2_gpt_0" height="600" width="160" frameborder="0"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/LEFT_SKYSCRAPER_2_gpt_0__hidden__" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/LEFT_SKYSCRAPER_2_gpt_0__hidden__" height="0" width="0" frameborder="0"></iframe></div></div>
+<!-- END SLOTNAME: LEFT_SKYSCRAPER_2 -->
+<div style="position: absolute;" id="WikiaAdInContentPlaceHolder"><div id="INCONTENT_BOXAD_1" class=" noprint  wikia-ad  hidden" style="height: 250px; width: 300px; position: relative; top: 10px; visibility: visible;"></div></div>
+</div>
+		
+		
+		<footer id="WikiaFooter" class="WikiaFooter notoolbar">
+	<!-- BEGIN SLOTNAME: LEFT_SKYSCRAPER_3 -->
+<div id="LEFT_SKYSCRAPER_3" class="wikia-ad noprint default-height hidden">
+<script>
+	window.adslots2.push(["LEFT_SKYSCRAPER_3",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: LEFT_SKYSCRAPER_3 -->
+	
+	<section>
+	<div class="header-container">
+		<h1>Spotlights de otras wikias <br><a href="http://comunidad.wikia.com/wiki/Project:Spotlights"><span style="font-style: italic;font-size:80%">Solicita el tuyo aquí</span></a></h1>
+		<a id="WikiaRandomWiki" href="http://community.wikia.com/wiki/Special:RandomWiki/17134" class="wikia-button">Wiki aleatorio</a>
+	</div>
+	<script type="text/javascript">
+		wgAfterContentAndJS.push(function() {
+			window.OpenXSPC = {};
+			window.OpenXSPC[ 'fillElem_SPOTLIGHT_FOOTER' ] = function() {
+				var output = window.OA_output || [];
+				( 14 in output ) && $( '#SPOTLIGHT_FOOTER_1' ).html( output[ 14 ] );
+				( 15 in output ) && $( '#SPOTLIGHT_FOOTER_2' ).html( output[ 15 ] );
+				( 16 in output ) && $( '#SPOTLIGHT_FOOTER_3' ).html( output[ 16 ] );
+			};
+		});
+	</script>
+	<ul id="SPOTLIGHT_FOOTER" class="LazyLoadAd SPOTLIGHT_FOOTER">
+		<li class="WikiaSpotlight item-1" id="SPOTLIGHT_FOOTER_1"></li>
+		<li class="WikiaSpotlight item-2" id="SPOTLIGHT_FOOTER_2"></li>
+		<li class="WikiaSpotlight item-3" id="SPOTLIGHT_FOOTER_3"></li>
+	</ul>
+</section>
+</footer>
+				<footer class="global-footer row">
+	<nav>
+		<h1>Wikia Inc Navigation</h1>
+		<div class="branding black">
+			<div class="wordmark">
+				<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="wordmark9">
+			</div>
+							<div class="hub"><a class="hub9" href="http://es.wikia.com/Estilo_de_vida">[ Estilo de vida ]</a></div>
+					</div>
+		<ul>
+							<li>
+											<a href="http://es.wikia.com/Sobre_nosotros"><span>Sobre Wikia</span></a>
+									</li>
+							<li>
+											<a href="http://comunidad.wikia.com/"><span>Comunidad Central</span></a>
+									</li>
+							<li>
+											<a href="http://www.wikia.com/Hiring">Contrataciones</a>
+									</li>
+							<li>
+											<a href="http://mediakit.wikia.com/wiki/Media_Kit_Wiki">Publicidad</a>
+									</li>
+							<li>
+											<a href="http://api.wikia.com/"><span>API</span></a>
+									</li>
+							<li>
+											<a href="http://es.openerp.wikia.com/wiki/Especial:Contactar">Contacto</a>
+									</li>
+							<li>
+											<a href="http://es.wikia.com/T%C3%A9rminos_de_Uso">Términos de Uso</a>
+									</li>
+							<li>
+											<a href="http://es.wikia.com/Pol%C3%ADtica_de_Privacidad">Política de Privacidad</a>
+									</li>
+							<li>
+											<a href="http://es.wikia.com/Licencia">CC-BY-SA</a>
+									</li>
+					</ul>
+	</nav>
+</footer>
+	</div>
+</section><!--WikiaPage-->
+
+	<div id="WikiaBar">
+		<div id="WikiaBarWrapper" class="WikiaBarWrapper">
+				<div class="wikia-bar wikia-bar-anon">
+			<a data-original-title="" href="#" class="arrow" data-tooltip="Ocultar" data-tooltipshow="Mostrar"></a>
+			<div class="ad">
+		<div id="WIKIA_BAR_BOXAD_1" class="noprint wikia-ad" style="width: 300px; position: relative;"><div data-gpt-slot-sizes="[[320,50],[320,70],[320,100]]" data-gpt-slot-params="{&quot;loc&quot;:&quot;bottom&quot;,&quot;pos&quot;:&quot;WIKIA_BAR_BOXAD_1&quot;,&quot;src&quot;:&quot;gpt&quot;}" data-gpt-page-params="{&quot;s0&quot;:&quot;auto&quot;,&quot;s1&quot;:&quot;_esopenerp&quot;,&quot;s2&quot;:&quot;article&quot;,&quot;artid&quot;:&quot;57&quot;,&quot;dmn&quot;:&quot;wikiacom&quot;,&quot;hostpre&quot;:&quot;es&quot;,&quot;wpage&quot;:&quot;instalar_openerp_en_linux_mint_o_ubuntu_8.10&quot;,&quot;lang&quot;:&quot;es&quot;,&quot;cat&quot;:[&quot;general&quot;],&quot;ab&quot;:[&quot;35_108&quot;,&quot;38_115&quot;,&quot;39_116&quot;],&quot;pageid&quot;:&quot;_esopenerp/57&quot;,&quot;hasp&quot;:&quot;yes&quot;,&quot;u&quot;:&quot;&quot;,&quot;ksgmnt&quot;:[],&quot;esrb&quot;:&quot;teen&quot;}" id="WIKIA_BAR_BOXAD_1_gpt"><div style="border: 0pt none;" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/WIKIA_BAR_BOXAD_1_gpt_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/WIKIA_BAR_BOXAD_1_gpt_0" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/WIKIA_BAR_BOXAD_1_gpt_0" height="50" width="320" frameborder="0"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/5441/wka.auto/_esopenerp//article/WIKIA_BAR_BOXAD_1_gpt_0__hidden__" id="google_ads_iframe_/5441/wka.auto/_esopenerp//article/WIKIA_BAR_BOXAD_1_gpt_0__hidden__" height="0" width="0" frameborder="0"></iframe></div></div>
+</div>
+<div style="display: block;" data-original-title="" class="message" data-messagetooltip="¡Haz clic aquí para más información!" data-wikiabarcontent="[{&quot;text&quot;:&quot;Divi\u00e9rtete con otra visi\u00f3n de la realidad&quot;,&quot;href&quot;:&quot;http:\/\/inciclopedia.wikia.com&quot;},{&quot;text&quot;:&quot;Jam\u00e1s imaginaste que se pudiesen hacer tantas cosas con la cer\u00e1mica&quot;,&quot;href&quot;:&quot;http:\/\/ceramica.wikia.com&quot;},{&quot;text&quot;:&quot;Si te gusta el f\u00fatbol prep\u00e1rate, hay que estar en forma&quot;,&quot;href&quot;:&quot;http:\/\/futbol.wikia.com&quot;},{&quot;text&quot;:&quot;Desata tu imaginaci\u00f3n en el mundo Pok\u00e9mon&quot;,&quot;href&quot;:&quot;http:\/\/es.pokefanon.wikia.com&quot;},{&quot;text&quot;:&quot;Tenemos respuestas para todo&quot;,&quot;href&quot;:&quot;http:\/\/respuestas.wikia.com&quot;}]"><a href="http://inciclopedia.wikia.com/">Diviértete con otra visión de la realidad</a></div>
+	<a class="wikiabar-button" href="http://es.wikia.com/Estilo_de_vida" data-index="0">
+		<img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikiabarIcon.png" class="icon cup">
+		<span>Estilos de vida</span>
+	</a>
+	<a class="wikiabar-button" href="http://comunidad.wikia.com/wiki/Lista_de_Wikis" data-index="1">
+		<img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikiabarIcon.png" class="icon cup">
+		<span>Lista de wikis</span>
+	</a>
+	<a class="wikiabar-button" href="https://www.facebook.com/wikia.es" data-index="2">
+		<img src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikiabarIcon.png" class="icon cup">
+		<span>Facebook</span>
+	</a>
+		</div>
+			</div>
+	<div class="WikiaBarCollapseWrapper hidden">
+		<a data-original-title="" href="#" class="wikia-bar-collapse" data-tooltip="Ocultar"></a>
+	</div>
+</div>
+
+	<!-- BEGIN SLOTNAME: GPT_FLUSH -->
+<div id="GPT_FLUSH" class="wikia-ad noprint default-height">
+<script>
+	window.adslots2.push(["GPT_FLUSH",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: GPT_FLUSH -->
+<!-- BEGIN SLOTNAME: INVISIBLE_1 -->
+<div id="INVISIBLE_1" class="wikia-ad noprint default-height">
+<script>
+	window.adslots2.push(["INVISIBLE_1",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: INVISIBLE_1 -->
+<!-- BEGIN SLOTNAME: INVISIBLE_2 -->
+<div id="INVISIBLE_2" class="wikia-ad noprint default-height">
+<script>
+	window.adslots2.push(["INVISIBLE_2",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: INVISIBLE_2 -->
+<!-- BEGIN SLOTNAME: SEVENONEMEDIA_FLUSH -->
+<div id="SEVENONEMEDIA_FLUSH" class="wikia-ad noprint default-height">
+<script>
+	window.adslots2.push(["SEVENONEMEDIA_FLUSH",null,"AdEngine2"]);
+</script>
+</div>
+<!-- END SLOTNAME: SEVENONEMEDIA_FLUSH -->
+</div>
+	<!--[if lt IE 8]>
+		<script src="http://slot1.images.wikia.nocookie.net/__cb1414084466/common/resources/wikia/libraries/json2/json2.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="http://slot1.images.wikia.nocookie.net/__cb1414084466/common/resources/wikia/libraries/html5/html5.min.js"></script>
+	<![endif]-->
+
+	<!-- Combined JS files and head scripts -->
+	
+<!-- Liftium options -->
+<script>LiftiumOptions = {"pubid":999,"baseUrl":"\/__varnish_liftium\/","kv_wgDBname":"esopenerp","kv_article_id":57,"kv_wpage":"Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10","kv_Hub":"Auto","kv_skin":"oasis","kv_user_lang":"es","kv_cont_lang":"es","kv_isMainPage":false,"kv_page_type":"article","geoUrl":"http:\/\/geoiplookup.wikia.com\/","kv_domain":"es.openerp.wikia.com","hasMoreCalls":true,"isCalledAfterOnload":true,"maxLoadDelay":6000};
+</script>
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/startup"></script><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/jquerymediawiki"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10","wgTitle":"Instalar OpenERP en Linux Mint o Ubuntu 8.10","wgCurRevisionId":103,"wgArticleId":57,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["General"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgSeparatorTransformTable":[",	.",".	,"],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSearchNamespaces":[0,14],"wgTimeAgoi18n":{"year":"hace un año","years":"hace %d años","month":"hace un mes","months":"hace %d meses","day":"hace un día","days":"hace %d días","hour":"hace una hora","hours":"hace %d horas","minute":"hace un minuto","minutes":"hace %d minutos","seconds":"hace un minuto","year-from-now":"\x26lt;timeago-year-from-now\x26gt;","years-from-now":"\x26lt;timeago-year-from-now\x26gt;","month-from-now":"un mes desde ahora","months-from-now":"%d mes desde ahora","day-from-now":"un día desde ahora","days-from-now":"%d días desde ahora","hour-from-now":"una hora desde ahora","hours-from-now":"%d horas desde ahora","minute-from-now":"un minuto desde ahora","minutes-from-now":"%d minutos desde ahora","second-from-now":"un minuto desde ahora","seconds-from-now":"un minuto desde ahora"},"sassParams":{"background-dynamic":"1","background-image":"","background-image-height":"800","background-image-width":"2000","color-body":"#bacdd8","color-body-middle":"#bacdd8","color-buttons":"#006cb0","color-header":"#3a5766","color-links":"#006cb0","color-page":"#ffffff","page-opacity":"100","widthType":2},"wgAssetsManagerQuery":"/__am/%4$d/%1$s/%3$s/%2$s","wgCatId":"18","wgBlankImgUrl":"data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D","wgMainpage":"Portada","wgIsContentNamespace":true,"wgExtensionsPath":"http://slot1.images.wikia.nocookie.net/__cb1414084466/common/extensions","wgResourceBasePath":"http://slot1.images.wikia.nocookie.net/__cb1414084466/common","wgSitename":"OpenERP Wiki","wgMWrevId":false,"wgRevisionId":103,"wgCookieDomain":".wikia.com","wgCookiePath":"/","wgEnableWikiaPhotoGalleryExt":true,"wgOasisGrid":true,"wgEnableMediaGalleryExt":false,"wgEnableUserLoginExt":true,"wgEnableLightboxExt":true,"wgShowAdModalInterstitialTimes":3,"wgEnableWebPThumbnails":true,"wgEnableWikiaFollowedPages":true,"wgFollowedPagesPagerLimit":15,"wgFollowedPagesPagerLimitAjax":600,"wgEnableWikiaBarExt":true,"wgEnableWikiaBarAds":true,"wgWikiaBarMainLanguages":["en","de","es","fr"],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"http://slot1.images.wikia.nocookie.net/__cb1414084466/common/skins/common/images/magnify-clip.png","pageLanguageCode":"es","pageLanguageDir":"ltr","svgMaxSize":2048,"namespacesWithSubpages":{"1":true,"2":true,"3":true,"5":true,"7":true,"8":true,"9":true,"11":true,"13":true,"15":true,"0":true,"4":true,"6":true,"10":true,"12":true,"14":true,"110":true,"111":true,"500":true,"501":true,"502":true,"503":true,"828":true,"829":true}},"wgMaxUploadSize":10485760,"wgEnableVisualEditorUI":false,"wgEnableWikiaInteractiveMaps":false,"wgQualarooUrl":"//s3.amazonaws.com/ki.js/52510/bgJ.js","wgVisualEditorPreferred":true,"wgOasisResponsive":true,"verticalName":"Lifestyle","WikiaEnableNewCreatepage":true,"ContentNamespacesText":[""],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","fbAppId":"112328095453510","fbScript":"http://connect.facebook.net/es_ES/all.js","fbUseMarkup":true,"fbLogo":true,"fbLogoutURL":"/wiki/Especial:Salida_del_usuario?returnto=Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10","fbReturnToTitle":"Instalar_OpenERP_en_Linux_Mint_o_Ubuntu_8.10","fbScriptLangCode":"es_ES","wgCategorySelect":{"defaultNamespace":"Categoría","defaultNamespaces":"Category|Categoría","defaultSeparator":":","defaultSortKey":"Instalar OpenERP en Linux Mint o Ubuntu 8.10"}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":1,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":1,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"oasis","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":1,"watchcreations":1,"watchdefault":1,"watchdeletion":1,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"htmlemails":1,"watchlistdigest":1,"enablerichtext":1,"editor":0,"visualeditor-enable":1,"visualeditor-betatempdisable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-language":0,"visualeditor-hidebetawelcome":0,"useeditwarning":true,"founderemails-joins-17134":0,"founderemails-edits-17134":0,"founderemails-views-digest-17134":0,"founderemails-complete-digest-17134":0,"variant":"es","language":"es","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":true,"searchNs15":false,"searchNs110":false,"searchNs111":false,"searchNs500":false,"searchNs501":false,"searchNs502":false,
+"searchNs503":false,"searchNs828":false,"searchNs829":false,"searchNs1200":false,"searchNs1201":false,"searchNs1202":false,"userlandingpage":1});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: esopenerp:resourceloader:filter:minify-js:7:8532186c2f0e275a0fe4a03d71921428 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","amd.shared","ext.visualEditor.wikiaViewPageTarget.init","mediawiki.user","mediawiki.page.ready","mediawiki.legacy.mwsuggest"]);
+}</script><script type="text/javascript" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/amd.loader,mw,nirvana,throbber,thumbnailer,tracker"></script><script type="text/javascript" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/ext.init"></script><div style="opacity: 1; display: none;" data-type="loading" class="ve-spinner visible"><div class="content"><div class="loading"></div><p class="message">Cargando el Editor Visual...</p></div></div><script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/oasis_shared_core_jsadengine2_jsadengine2_late_jsadengine2_sp.js"></script>
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/wikia.php"></script>
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/monetization_module_js.js"></script>
+
+<script type="text/javascript">/*<![CDATA[*/ Wikia.LazyQueue.makeQueue(wgAfterContentAndJS, function(fn) {fn();}); wgAfterContentAndJS.start(); /*]]>*/</script><iframe style="visibility: hidden; display: none;" src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/container.htm"></iframe>
+<script type="text/javascript">/*<![CDATA[*/ if (typeof AdEngine_trackPageInteractive === 'function') {wgAfterContentAndJS.push(AdEngine_trackPageInteractive);} /*]]>*/</script>
+<script src="Instalar%20OpenERP%20en%20Linux%20Mint%20o%20Ubuntu%208.10%20-%20OpenERP%20Wiki_files/ext.anon"></script>
+
+<script type="text/javascript">
+var agllGroup = "Lifestyle";
+!function(){
+var a=document.createElement("script");a.type="text/javascript";a.async=!0;var b=["http://a98dc034c7781a941eba-bac02262202668bbe918ea9fb5289cd2.r58.cf2.rackcdn.com","https://52e473ee9859b886964f-bac02262202668bbe918ea9fb5289cd2.ssl.cf2.rackcdn.com"];a.src=("https:"==document.location.protocol?b[1]:b[0])+"/c59hk50tip94.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)
+}();</script><script>if (JSSnippetsStack.length) $.getScript('http://slot1.images1.wikia.nocookie.net/__am/1414084466/one/minify%3D1/extensions/wikia/JSSnippets/js/JSSnippets.js');</script><!-- Facebook integration -->
+<div id="fb-root"></div><script>var wgSassLoadedScss = ["skins\/oasis\/css\/oasis.scss","extensions\/wikia\/MonetizationModule\/styles\/MonetizationModule.scss","skins\/oasis\/css\/core\/AccountNavigation.scss","extensions\/wikia\/UserLogin\/css\/UserLoginDropdown.scss","extensions\/wikia\/Qualaroo\/css\/Qualaroo.scss"];</script>
+
+
+
+
+
+</body></html>
